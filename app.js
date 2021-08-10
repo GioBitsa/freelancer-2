@@ -81,12 +81,3 @@ close.addEventListener('click', () => {
     open.classList.remove('close');
     nav.classList.remove('show')
 })
-
-
-// preloader
-
-$(window).on('load', function() { // makes sure the whole site is loaded 
-    $('#status').delay(350).fadeOut('slow'); // will first fade out the loading animation 
-    $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
-    $('body').delay(350).css({'overflow':'visible'});
-  })
