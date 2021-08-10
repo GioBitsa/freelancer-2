@@ -106,6 +106,36 @@ section {
     margin-top: 20px;
 }
 
+body {
+    overflow: hidden;
+  }
+  
+  
+/* Preloader */
+  
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--black);
+    z-index: 99;
+}
+  
+#status {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-image: url(./images/Preloader.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translate(-50%,-50%);
+    border-radius: 20px;
+}
+
 /* ------- header ------- */
 
 header{
@@ -115,7 +145,6 @@ header{
     width: 100%;
     height: 7vh;
     background-color: var(--black);
-    --webkit-filter:blur(20px);
     z-index: 10;
 }
 
@@ -336,12 +365,13 @@ header .header .bar-btns i{
     top: 0;
     border-top: 200px solid var(--black);
     border-right: 100vw solid transparent;
+    transform: translateY(-1px);
 }
 .section-3::after{
     top: 100%;
     border-bottom: 200px solid var(--black);
     border-right: 100vw solid transparent;
-    transform: translateY(-100%);
+    transform: translateY(calc(-100% - -1px));
 }
 
 .section-3 .section-header h2 {
@@ -650,6 +680,7 @@ footer::before{
     height: 0;
     border-top: 220px solid var(--black);
     border-left: 100vw solid transparent;
+    transform: translateY(-1px);
 }
 
 footer .top-content {
@@ -758,18 +789,13 @@ footer .content .copyright{
         left: calc(100% - 250px);
     }
     .section-2 .content .item:nth-child(3){
-        top: 70%;
         left: calc(100% - 250px);
     }
     .section-2 .content .item:nth-child(5){
-        top: 70%;
         left: calc(0% + 250px);
-        flex-direction: row-reverse;
     }
     .section-2 .content .item:nth-child(6){
-        top: 30%;
         left: calc(0% + 250px);
-        flex-direction: row-reverse;
     }
 
     /* ----x---- section 2 ----x---- */
@@ -797,24 +823,59 @@ footer .content .copyright{
 
 @media screen and (max-width: 1240px){
 
+    .btn2{
+        font-size: 1rem;
+    }
+
+    .link{
+        font-size: 16px;
+    }
+
+    .section-header h2,
+    .section-header h2 span{
+        font-size: 50px;
+    }
+    .section-header p {
+        font-size: 20px;
+    }
+
+    /* --------- header --------- */
+
+    header .header ul li a{
+        font-size: 18px;
+    }
+
+    /* ----x---- header ----x---- */
+
+    /* --------- hero --------- */
+
+    .hero .content h1{
+        font-size: 52px;
+    }
+
+    .hero .content h1 span{
+        font-size: 80px;
+    }
+
+    .hero .content p{
+        font-size: 20px;
+    }
+
+    /* ----x---- hero ----x---- */
+
     /* --------- section 2 --------- */
 
     .section-2 .content .item:nth-child(2){
         left: calc(100% - 200px);
     }
     .section-2 .content .item:nth-child(3){
-        top: 70%;
         left: calc(100% - 200px);
     }
     .section-2 .content .item:nth-child(5){
-        top: 70%;
         left: calc(0% + 200px);
-        flex-direction: row-reverse;
     }
     .section-2 .content .item:nth-child(6){
-        top: 30%;
         left: calc(0% + 200px);
-        flex-direction: row-reverse;
     }
     
     /* ----x---- section 2 ----x---- */
@@ -823,6 +884,27 @@ footer .content .copyright{
 
     .section-3 .content{
         width: 700px;
+    }
+
+    .section-3 .content .item span{
+        font-size: 45px;
+    }
+
+    .section-3 .content .item .img-box{
+        width: 200px;
+        height: 200px;
+    }
+
+    .section-3 .content .item .img-box img{
+        width: 80px;
+    }
+
+    .section-3 .content .item .text p{
+        font-size: 21px;
+    }
+
+    .section-3 .content .item .text a{
+        font-size: 18px;
     }
 
     /* ----x---- section 3 ----x---- */
@@ -839,6 +921,18 @@ footer .content .copyright{
 
     /* ----x---- section 4 ----x---- */
 
+    /* --------- section 5 --------- */
+
+    .section-5 .content .item .title p{
+        font-size: 21px;
+    }
+
+    .section-5 .content .item .dropdown-content p{
+        font-size: 18px;
+    }
+
+    /* ----x---- section 5 ----x---- */
+
     /* --------- footer --------- */
 
     footer .top-content .part:nth-child(1){
@@ -848,11 +942,26 @@ footer .content .copyright{
         padding-right: 50px;
     }
 
+    footer .top-content .part p{
+        font-size: 35px;
+    }
+
+    footer .top-content .part .btn3{
+        font-size: 20px;
+    }
+
+    footer .content ul li a{
+        font-size: 18px;
+    }
+
     /* ----x---- footer ----x---- */
 
 }
 
 @media screen and (max-width: 1080px){
+
+    /* --------- header --------- */
+
     header .header ul {
         display: block;
     }
@@ -890,7 +999,422 @@ footer .content .copyright{
         display: none;
         z-index: 20;
     }
-    #close.show{
-        display: block;
+
+    #close{
+        position: relative;
+        display: none;
+        z-index: 20;
     }
+    #close.show{
+        position: relative;
+        display: block;
+        z-index: 20;
+    }
+
+    /* ----x---- header ----x---- */
+
+    /* --------- section 2 --------- */
+
+    .section-2 .content img{
+        width: 200px;
+    }
+
+    .section-2 .content .item{
+        width: 300px;
+    }
+
+    .section-2 .content .item:nth-child(2){
+        left: calc(100% - 150px);
+    }
+    .section-2 .content .item:nth-child(3){
+        left: calc(100% - 150px);
+    }
+    .section-2 .content .item:nth-child(5){
+        left: calc(0% + 150px);
+    }
+    .section-2 .content .item:nth-child(6){
+        left: calc(0% + 150px);
+    }
+
+    /* ----x---- section 2 ----x---- */
+
+    /* --------- section 3 --------- */
+
+    .section-3{
+        padding: 100px 0;
+    }
+
+    .section-3::before{
+        border-top: 100px solid var(--black);
+    }
+    .section-3::after{
+        border-bottom: 100px solid var(--black);
+    }
+
+    .section-3 .content{
+        flex-direction: column;
+    }
+    .section-3 .content .item{
+        margin: 20px 0;
+    }
+
+    /* ----x---- section 3 ----x---- */
+
+    /* --------- section 4 --------- */
+
+    .section-4 .content table tr td{
+        font-size: 18px;
+        padding: 20px 10px;
+    }
+
+    /* ----x---- section 4 ----x---- */
+
+    /* --------- footer --------- */
+
+    footer::before {
+        border-top: 150px solid var(--black);
+    }
+
+    footer .top-content{
+        width: 90%;
+    }
+
+    /* ----x---- footer ----x---- */
+
+}
+
+@media screen and (max-width: 900px){
+
+    .section-header h2, .section-header h2 span{
+        font-size: 35px;
+    }
+    .section-header p{
+        font-size: 16px;
+    }
+
+    /* --------- hero --------- */
+
+    .hero .content{
+        width: 100%;
+    }
+    .hero .content h1 {
+        font-size: 39px;
+    }
+    .hero .content h1 span{
+        font-size: 60px;
+    }
+    .hero .content p{
+        font-size: 16px;
+    }
+
+    /* ----x---- hero ----x---- */
+
+    /* --------- section 2 --------- */
+
+    .section-2 .content{
+        padding: 500px 0;
+    }
+
+    .section-2 .content .item{
+        flex-direction: column !important;
+        left: 50% !important;
+    }
+
+    .section-2 .content .item img{
+        margin-bottom: 20px;
+    }
+
+    .section-2 .content .item:nth-child(2){
+        top: calc(100%);
+    }
+    .section-2 .content .item:nth-child(3){
+        top: calc(100% - 200px);
+    }
+    .section-2 .content .item:nth-child(4){
+        top: calc(100% - 400px);
+    }
+    .section-2 .content .item:nth-child(5){
+        top: calc(0% + 400px);
+    }
+    .section-2 .content .item:nth-child(6){
+        top: calc(0% + 200px);
+    }
+    .section-2 .content .item:nth-child(7){
+        top: 0;
+    }
+
+    /* ----x---- section 2 ----x---- */
+
+    /* --------- section 3 --------- */
+
+    .section-3 .content{
+        width: 100%;
+    }
+
+    /* ----x---- section 3 ----x---- */
+
+    /* --------- section 4 --------- */
+
+    .section-4 .content .payment .item-box{
+        flex-direction: column;
+    }
+
+    /* ----x---- section 4 ----x---- */
+
+    /* --------- section 5 --------- */
+
+    .section-5 .content{
+        padding: 0;
+    }
+
+    .section-5 .content .item .title p{
+        font-size: 18px;
+    }
+
+    .section-5 .content .item .dropdown-content p{
+        font-size: 16px;
+    }
+
+    .section-5 .content .item .title .buttons{
+        margin-left: 50px;
+    }
+
+    /* ----x---- section 5 ----x---- */
+
+}
+
+@media screen and (max-width: 768px) {
+
+    header .header ul{
+        width: 400px;
+    }
+
+    header .header ul.show{
+        left: calc(100% - 400px);
+    }
+
+    /* --------- section 2 --------- */
+
+    .section-2 .content .item .text h6{
+        font-size: 18px;
+    }
+    .section-2 .content .item .text p{
+        font-size: 14px;
+    }
+    .section-2 .content img{
+        width: 150px;
+    }
+
+    /* ----x---- section 2 ----x---- */
+
+    /* --------- section 3 -------- */
+
+    .section-3 .content .item span{
+        font-size: 35px;
+    }
+
+    .section-3 .content .item .img-box{
+        width: 150px;
+        height: 150px;
+    }
+
+    .section-3 .content .item .text{
+        margin: 30px 0;
+    }
+
+    .section-3 .content .item .text p{
+        font-size: 18px;
+    }
+
+    .section-3 .content .item .text a{
+        font-size: 16px;
+        padding: 15px 20px;
+    }
+
+    .section-3 .content .item .img-box img{
+        width: 50px;
+    }
+
+    /* ----x---- section 3 ----x---- */
+    
+    /* --------- section 4 --------- */
+
+    .section-4 .content table{
+        display: block;
+        table-layout: fixed;
+        overflow-x: auto;
+    }
+
+    /* ----x---- section 4 ----x---- */
+
+    /* --------- footer --------- */
+
+    footer .top-content{
+        width: 100%;
+    }
+
+    footer .top-content .part:nth-child(2){
+        display: none;
+    }
+
+    /* ----x---- footer ----x---- */
+
+}
+
+@media screen and (max-width: 550px){
+
+    .section-header h2, .section-header h2 span{
+        font-size: 28px;
+    }
+
+    .section-header{
+        margin-bottom: 50px;
+    }
+
+    .section-header p{
+        font-size: 13px;
+    }
+
+    .wrapper{
+        padding: 20px 25px;
+    }
+
+    section{
+        padding: 50px 0;
+    }
+
+    /* --------- header --------- */
+
+    header .header ul{
+        width: 300px;
+    }
+
+    header .header ul.show{
+        left: calc(100% - 300px);
+    }
+
+    /* ----x---- header ----x---- */
+
+    /* --------- hero --------- */
+
+    .hero .content h1 {
+        font-size: 30px;
+    }
+    .hero .content h1 span{
+        font-size: 46px;
+    }
+    .hero .content .btn-box .btn2{
+        padding: 13px 25px;
+    }
+    .hero .content p{
+        font-size: 14px;
+    }
+
+    /* ----x---- hero ----x---- */
+
+    /* --------- section 2 --------- */
+
+    .section-2 .section-header{
+        margin-bottom: 100px;
+    }
+
+    /* ----x---- section 2 ----x---- */
+
+    /* --------- section 3 --------- */
+
+    .section-3 .content .item{
+        width: 250px;
+    }
+
+    /* ----x---- section 3 ----x---- */
+
+    /* --------- section 5 --------- */
+
+    .section-5 .content .item .title .buttons{
+        margin-left: 20px;
+    }
+
+    /* ----x---- section 5 ----x---- */
+
+    /* --------- footer --------- */
+
+    footer .top-content .part:nth-child(1){
+        padding: 25px;
+    }
+
+    footer .top-content .part .btn3{
+        font-size: 16px;
+        padding: 15px 20px;
+    }
+
+    footer .top-content .part p{
+        font-size: 27px;
+    }
+
+    footer .content{
+        margin: 0;
+    }
+
+    footer .content ul li{
+        padding: 0 10px;
+    }
+
+    footer .content ul li a{
+        font-size: 16px;
+    }
+
+    /* ----x---- footer ----x---- */
+
+}
+
+@media screen and (max-width: 400px) {
+
+    /* --------- hero --------- */
+
+    .hero .content h1{
+        font-size: 26px;
+    }
+    
+    .hero .content h1 span{
+        font-size: 41px;
+    }
+    
+    .hero .content p{
+        font-size: 12px;
+    }
+
+    /* ----x---- hero ----x---- */
+
+    /* --------- section 3 --------- */
+
+    .section-3{
+        padding: 50px 0;
+    }
+
+    .section-3::after {
+        border-bottom: 50px solid var(--black);
+    }
+
+    .section-3::before {
+        border-top: 50px solid var(--black);
+    }
+
+    /* ----x---- section 3 ----x---- */
+
+    /* --------- section 4 --------- */
+
+    .section-4 .content .payment .method{
+        width: 100%;
+    }
+
+    /* ----x---- section 4 ----x---- */
+
+    /* --------- footer --------- */
+
+    footer::before {
+        border-top: 100px solid var(--black);
+    }
+
+    /* ----x---- footer ----x---- */
+
 }
