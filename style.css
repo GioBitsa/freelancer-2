@@ -1547,6 +1547,13 @@ footer .content .copyright{
     box-shadow: 0 4px 4px 0 black;
 }
 
+.upgrade-section-2 .content .chosen-content .item{
+    display: none;
+}
+.upgrade-section-2 .content .chosen-content .item.active{
+    display: block;
+}
+
 .upgrade-section-2 .content .chosen-content .item .title{
     color: var(--main-orange);
     font-size: 30px;
