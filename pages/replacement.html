@@ -46,9 +46,9 @@
     <section class="upgrade-section-2">
         <div class="wrapper">
             <div class="page-section-header">
-                <h2>upgrade tool</h2>
-                <span>upgrade your</span>
-                <span>account</span>
+                <h2>replacement tool</h2>
+                <span>lost your</span>
+                <span>premium?</span>
             </div>
             <div class="content">
                 <div class="choose">
@@ -70,21 +70,67 @@
                     </div>
                 </div>
                 <div class="chosen-content">
-                    <div class="item ">
-                        <div class="title">enter your upgrade key</div>
-                        <div class="item-content">
-                            <form action="">
-                                <label for="key">Upgrade Key</label>
-                                <input type="text" name="key">
-                            </form>
-                            <p>You can find it on your email address. Look for an email from Sellix. It looks something like this:</p>
-                            <span>goldx123456789abcdefghijklmn</span>
-                            <a href="./upgrade-details.html" class="continue-btn">
-                                Continue
-                                <i class="fas fa-play"></i>
-                            </a>
+                    <form action="">
+                        <div class="item active">
+                            <div class="title">enter your upgrade key</div>
+                            <div class="item-content">
+                                <div class="form">
+                                    <label for="key">Upgrade Key</label>
+                                    <input type="text" name="key">
+                                </div>
+                                <p>You can find it on your email address. Look for an email from Sellix. It looks something like this:</p>
+                                <span>goldx123456789abcdefghijklmn</span>
+                                <a style="cursor: pointer;" class="continue-btn" id="btn1">
+                                    Continue
+                                    <i class="fas fa-play"></i>
+                                </a>
+                            </div>
                         </div>
-                    </div>
+                        <div class="item">
+                            <div class="title">Account details</div>
+                            <div class="item-content">
+                                <div class="form">
+                                    <label for="email">Spotify Email</label>
+                                    <input type="email" name="email">
+                                    <label for="password">Password</label>
+                                    <input type="password" name="password">
+                                </div>
+                                <a style="cursor: pointer;" class="continue-btn" id="btn2">
+                                    Continue
+                                    <i class="fas fa-play"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="title">Summary</div>
+                            <div class="item-content">
+                                <ul>
+                                    <li><p>Remember the hi-tech bot from the upgrade page? Yeah, it will now check your account for Premium.</p></li>
+                                    <li><p>If the rumour is true, and you have infact, lost your premium, the bot will try to upgrade your account again.</p></li>
+                                    <li><p>In case that fails, then it means Spotify won’t let you join another Premium family using this account.</p></li>
+                                    <li><p>But, don’t worry, our bot is a chad. It will get you your Premium back by following a longer replacement procedure that you can read more about</p> <a href="./readmore.html" class="readmore">here</a>.</li>
+                                </ul>
+                                <a style="cursor: pointer;" class="continue-btn" id="btn3">
+                                    Continue
+                                    <i class="fas fa-play"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="title">Success!</div>
+                            <div class="item-content">
+                                <p>Your account has been successfully upgraded to Premium.<br>Enjoy your music without any interruptions!</p>
+                                <p style="margin-top: 20px;">You are AWESOME! And so is our Discord server. <br>Join the community now!</p>
+                                <a href="#" class="continue-btn">
+                                    LET ME INNN
+                                    <i class="fas fa-play"></i>
+                                </a>
+                                <p>Also.. maybe tell your friends about us?.. nah jk.. unless?? 😳👉👈 <br>
+                                <br>Thanks for buying from us!
+                                SpotifyGold <3</p>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -124,5 +170,6 @@
     </footer>
 
     <script src="../app.js"></script>
+    <script src="../scripts/upgrade.js"></script>
 </body>
 </html>
