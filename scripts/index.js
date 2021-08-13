@@ -1,13 +1,4 @@
-// hero
 
-$(document).ready(function() {
-    var $magic = $(".magic"),
-        magicWHalfWidth = $magic.width() / 2;
-        magicWHalfHeight = $magic.height() / 2;
-    $(document).on("mousemove", function(e) {
-      $magic.css({"left": e.pageX - magicWHalfWidth, "top": e.pageY - magicWHalfHeight});
-    });
-  });
 
 // section 4
 

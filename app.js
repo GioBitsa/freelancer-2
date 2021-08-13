@@ -1,4 +1,15 @@
 
+// moving background mouse effect
+
+$(document).ready(function() {
+    var $magic = $(".magic"),
+        magicWHalfWidth = $magic.width() / 2;
+        magicWHalfHeight = $magic.height() / 2;
+    $(document).on("mousemove", function(e) {
+      $magic.css({"left": e.pageX - magicWHalfWidth, "top": e.pageY - magicWHalfHeight});
+    });
+  });
+
 // scroll up btn
 
 const scrollUpBtn = document.querySelector('footer .content .scroll-up');
