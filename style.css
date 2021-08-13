@@ -27,7 +27,7 @@
 
 .wrapper{
     width: 100%;
-    max-width: 1600px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 20px 50px;
 }
@@ -59,11 +59,11 @@ a{
 
 .btn2{
     display: inline-block;
-    padding: 15px 22px;
+    padding: 17px 34px;
     border-radius: 10px;
     text-align: center;
     text-transform: capitalize;
-    font-size: 1.25rem; /* 20px */
+    font-size: 18px;
     background-image: url(./images/btn-background.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -75,13 +75,13 @@ a{
     color: var(--gray);
     text-decoration: underline;
     text-transform: capitalize;
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 30px;
     font-weight: 400;
 }
 
 section {
-    padding: 100px 0;
+    padding: 50px 0;
 }
 
 .section-header {
@@ -90,7 +90,7 @@ section {
 }
 
 .section-header h2{
-    font-size: 65px;
+    font-size: 50px;
     font-family: var(--integral-bold);
     letter-spacing: 1px;
 }
@@ -100,7 +100,7 @@ section {
 }
 
 .section-header p{
-    font-size: 25px;
+    font-size: 20px;
     font-family: var(--nexa-light);
     opacity: 0.7;
     margin-top: 20px;
@@ -136,6 +136,11 @@ section {
 	left: 50%;
 	top: 50%;
 	position: absolute;
+    opacity: 0;
+    animation-name: reveal;
+    animation-delay: 0.5s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 }
 
 @keyframes fadeOut {
@@ -146,6 +151,15 @@ section {
         opacity: 0;
         display: none;
         z-index: -1;
+    }
+}
+
+@keyframes reveal {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
     }
 }
 
@@ -191,7 +205,7 @@ header .header ul li{
 
 header .header ul li a{
     font-weight: 500;
-    font-size: 1.25rem; /* 20px */
+    font-size: 18px;
     color: var(--white);
     text-transform: capitalize;
 }
@@ -231,20 +245,20 @@ header .header .bar-btns i{
 }
 
 .hero .content h1 {
-    font-size: 66px;
+    font-size: 55px;
     text-transform: uppercase;
     font-family: var(--integral-bold);
     letter-spacing: 1px;
 }
 
 .hero .content h1 span{
-    font-size: 100px;
+    font-size: 84px;
     font-family: var(--akira);
     color: var(--main-orange);
 }
 
 .hero .content p{
-    font-size: 25px;
+    font-size: 20px;
     opacity: 0.7;
 }
 
@@ -256,7 +270,7 @@ header .header .bar-btns i{
 }
 
 .hero .content .btn-box .btn2{
-    padding: 22px 50px;
+    padding: 17px 34px;
 }
 
 .hero .content .btn-box .btn2 i{
@@ -277,7 +291,7 @@ header .header .bar-btns i{
 }
 
 .section-2 .content img{
-    width: 250px;
+    width: 200px;
 }
 
 .section-2 .content .item{
@@ -422,12 +436,12 @@ header .header .bar-btns i{
 
 .section-3 .content .item span{
     font-family: var(--integral-regular);
-    font-size: 50px;
+    font-size: 40px;
 }
 
 .section-3 .content .item .img-box{
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     margin: 0 auto;
     border: 5px solid black;
     border-radius: 100%;
@@ -437,7 +451,7 @@ header .header .bar-btns i{
 }
 
 .section-3 .content .item .img-box img{
-    width: 130px;
+    width: 100px;
 }
 
 .section-3 .content .item .text{
@@ -447,12 +461,12 @@ header .header .bar-btns i{
 
 .section-3 .content .item .text p{
     font-family: var(--nexa-bold);
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .section-3 .content .item .text a{
     font-weight: 600;
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 20px;
 }
 
@@ -462,7 +476,7 @@ header .header .bar-btns i{
 
 .btn3{
     display: inline-block;
-    padding: 20px 30px;
+    padding: 15px 20px;
     background-color: var(--black);
     color: var(--main-orange);
     border-radius: 10px;
@@ -478,88 +492,81 @@ header .header .bar-btns i{
     padding: 0 20px;
 }
 
-.section-4 .content .payment{
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-20px);
-}
-
-.section-4 .content .payment .method{
-    width: 800px;
+.section-4 .content table tr td .method{
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
 }
 
-.section-4 .content .payment .method p{
+.section-4 .content table tr td .method p{
     font-family: var(--nexa-bold);
-    font-size: 20px;
-    text-align: center;
+    font-size: 18px;
 }
 
-.section-4 .content .payment .method .fee{
+.section-4 .content table tr td .method .fee{
     font-family: var(--nexa-light);
     color: #B8B8B8;
     margin-top: 20px;
     font-size: 14px;
 }
 
-.section-4 .content .payment .method .choose {
+.section-4 .content table tr td .method .choose {
     display: flex;
     align-items: center;
     margin-top: 10px;
     padding: 7px;
     background-color: var(--dark-gray);
     border-radius: 50px;
+    width: max-content;
+    width: fit-content;
 }
 
-.section-4 .content .payment .method .choose p{
+.section-4 .content table tr td .method .choose p{
     padding: 10px 20px;
     border-radius: 50px;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 18px;
 }
-.section-4 .content .payment .method .choose p.active{
+.section-4 .content table tr td .method .choose p.active{
     background-color: #1C1C1C;
     color: var(--main-orange);
 }
 
 
-.section-4 .content .payment .item-box{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
+/* ----- */
 
-.section-4 .content .payment .item-box .item{
+.section-4 .content table tr td .item{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 40px 20px 20px 20px;
+    padding: 20px 10px;
     border-radius: 20px;
     text-align: center;
-    width: 300px;
+    display: none;
 }
 
-.section-4 .content .payment .item-box .item.active{
+.section-4 .content table tr td .item.show{
+    display: flex;
+}
+
+.section-4 .content table tr td .item.active{
     background-color: var(--main-orange);
     color: var(--very-dark-gray);
     padding: 50px 20px 20px 20px;
+    transform: translateY(-20px);
 }
 
-.section-4 .content .payment .item-box .item p{
+.section-4 .content table tr td .item p{
     font-family: var(--nexa-bold);
-    font-size: 25px;
+    font-size: 22px;
     position: relative;
     padding-bottom: 10px;
     width: 100%;
     margin-bottom: 20px;
 }
 
-.section-4 .content .payment .item-box .item p::after{
+.section-4 .content table tr td .item p::after{
     content: "";
     position: absolute;
     top: 100%;
@@ -569,31 +576,32 @@ header .header .bar-btns i{
     background-color: var(--main-orange);
 }
 
-.section-4 .content .payment .item-box .item.active p::after{
+.section-4 .content table tr td .item.active p::after{
     background-color: var(--very-dark-gray);
 }
 
-.section-4 .content .payment .item-box .item span{
-    font-size: 50px;
+.section-4 .content table tr td .item span{
+    font-size: 40px;
     font-family: var(--nexa-bold);
 }
 
-.section-4 .content .payment .item-box .item .btn2{
-    margin: 30px 0;
+.section-4 .content table tr td .item .btn2{
+    margin: 30px 0 10px 0;
     font-family: var(--nexa-bold);
 }
 
-.section-4 .content .payment .item-box .item.active .btn2{
+.section-4 .content table tr td .item.active .btn2{
     background-image: none;
     background-color: var(--very-dark-gray);
     color: var(--main-orange);
 }
 
 
+/* ----------------------- */
+
 .section-4 .content table{
-    margin: 50px 0;
+    margin-bottom: 50px;
     width: 100%;
-    border-spacing: 25px;
 }
 
 .section-4 .content table tr{
@@ -601,15 +609,15 @@ header .header .bar-btns i{
 }
 
 .section-4 .content table tr td{
-    font-size: 22px;
+    font-size: 18px;
     font-family: var(--nexa-bold);
     color: #9D9D9D;
-    padding: 20px;
+    padding: 30px 20px;
 }
 
-.section-4 .content table tr:nth-child(1)::after,
 .section-4 .content table tr:nth-child(2)::after,
-.section-4 .content table tr:nth-child(3)::after{
+.section-4 .content table tr:nth-child(3)::after,
+.section-4 .content table tr:nth-child(4)::after{
     content: "";
     position: absolute;
     top: 110%;
@@ -636,6 +644,11 @@ header .header .bar-btns i{
 
 .section-5 .content .item{
     margin: 50px 0;
+    position: relative;
+}
+
+.section-5 .content .item.active{
+    height: 70px;
 }
 
 .section-5 .content .item .title{
@@ -647,7 +660,7 @@ header .header .bar-btns i{
 
 .section-5 .content .item .title p{
     font-family: var(--nexa-bold);
-    font-size: 25px;
+    font-size: 22px;
 }
 
 .section-5 .content .item .title .buttons{
@@ -667,16 +680,21 @@ header .header .bar-btns i{
 .section-5 .content .item .dropdown-content{
     padding-right: 40px;
     margin-top: 20px;
-    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.3s;
+    opacity: 0;
 }
 
 .section-5 .content .item .dropdown-content.show{
-    display: block;
+    opacity: 1;
+    top: 20px;
 }
 
 .section-5 .content .item .dropdown-content p{
     font-family: var(--nexa-light);
-    font-size: 23px;
+    font-size: 18px;
     color: #E1E1E1;
     opacity: 0.7;
 }
@@ -704,7 +722,7 @@ footer::before{
 }
 
 footer .top-content {
-    width: 80%;
+    width: 800px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -714,10 +732,7 @@ footer .top-content {
     background-color: var(--main-orange);
     position: relative;
     z-index: 1;
-}
-
-footer .top-content .part{
-    padding: 50px 0;
+    padding: 20px 50px;
 }
 
 footer .top-content .part:nth-child(1){
@@ -725,21 +740,17 @@ footer .top-content .part:nth-child(1){
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-left: 100px;
-}
-footer .top-content .part:nth-child(2){
-    padding-right: 100px;
 }
 
 footer .top-content .part p{
     font-family: var(--nexa-bold);
-    font-size: 45px;
+    font-size: 30px;
     margin-bottom: 30px;
 }
 
 footer .top-content .part .btn3{
     font-family: var(--nexa-bold);
-    font-size: 25px;
+    font-size: 18px;
     text-transform: capitalize;
 }
 
@@ -748,7 +759,6 @@ footer .top-content .part img{
 }
 
 footer .content {
-    margin: 50px 0 0;
     padding: 100px 0 0;
     text-align: center;
 }
@@ -764,7 +774,7 @@ footer .content  ul li{
 }
 
 footer .content  ul li a{
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 400;
     text-transform: capitalize;
     color: var(--black);
@@ -828,23 +838,12 @@ footer .content .copyright{
 
     /* ----x---- section 3 ----x---- */
 
-    /* --------- section 4 --------- */
-
-    .section-4 .content .payment .item-box{
-        justify-content: space-evenly;
-    }
-
-    .section-4 .content .payment .item-box .item{
-        width: 250px;
-    }
-
-    /* ----x---- section 4 ----x---- */
 }
 
-@media screen and (max-width: 1240px){
+@media screen and (max-width: 1280px){
 
     .btn2{
-        font-size: 1rem;
+        font-size: 16px;
     }
 
     .link{
@@ -853,16 +852,16 @@ footer .content .copyright{
 
     .section-header h2,
     .section-header h2 span{
-        font-size: 50px;
+        font-size: 40px;
     }
     .section-header p {
-        font-size: 20px;
+        font-size: 16px;
     }
 
     /* --------- header --------- */
 
     header .header ul li a{
-        font-size: 18px;
+        font-size: 16px;
     }
 
     /* ----x---- header ----x---- */
@@ -870,15 +869,15 @@ footer .content .copyright{
     /* --------- hero --------- */
 
     .hero .content h1{
-        font-size: 52px;
+        font-size: 45px;
     }
 
     .hero .content h1 span{
-        font-size: 80px;
+        font-size: 69px;
     }
 
     .hero .content p{
-        font-size: 20px;
+        font-size: 18px;
     }
 
     /* ----x---- hero ----x---- */
@@ -907,74 +906,39 @@ footer .content .copyright{
     }
 
     .section-3 .content .item span{
-        font-size: 45px;
+        font-size: 40px;
     }
 
     .section-3 .content .item .img-box{
-        width: 200px;
-        height: 200px;
+        width: 170px;
+        height: 170px;
     }
 
     .section-3 .content .item .img-box img{
-        width: 80px;
+        width: 70px;
     }
 
     .section-3 .content .item .text p{
-        font-size: 21px;
+        font-size: 18px;
     }
 
     .section-3 .content .item .text a{
-        font-size: 18px;
+        font-size: 16px;
     }
 
     /* ----x---- section 3 ----x---- */
 
-    /* --------- section 4 --------- */
-
-    .section-4 .content .payment {
-        transform: translate(0);
-        flex-direction: column;
-    }
-    .section-4 .content .payment .method{
-        margin: 50px auto;
-    }
-
-    /* ----x---- section 4 ----x---- */
-
     /* --------- section 5 --------- */
 
     .section-5 .content .item .title p{
-        font-size: 21px;
-    }
-
-    .section-5 .content .item .dropdown-content p{
-        font-size: 18px;
-    }
-
-    /* ----x---- section 5 ----x---- */
-
-    /* --------- footer --------- */
-
-    footer .top-content .part:nth-child(1){
-        padding-left: 50px;
-    }
-    footer .top-content .part:nth-child(2){
-        padding-right: 50px;
-    }
-
-    footer .top-content .part p{
-        font-size: 35px;
-    }
-
-    footer .top-content .part .btn3{
         font-size: 20px;
     }
 
-    footer .content ul li a{
-        font-size: 18px;
+    .section-5 .content .item .dropdown-content p{
+        font-size: 17px;
     }
 
-    /* ----x---- footer ----x---- */
+    /* ----x---- section 5 ----x---- */
 
 }
 
@@ -1037,10 +1001,26 @@ footer .content .copyright{
 
     /* ----x---- header ----x---- */
 
+    /* --------- hero --------- */
+
+    .hero .content h1{
+        font-size: 40px;
+    }
+
+    .hero .content h1 span{
+        font-size: 62px;
+    }
+
+    .hero .content p{
+        font-size: 16px;
+    }
+
+    /* ----x---- hero ----x---- */
+
     /* --------- section 2 --------- */
 
     .section-2 .content img{
-        width: 200px;
+        width: 150px;
     }
 
     .section-2 .content .item{
@@ -1058,6 +1038,22 @@ footer .content .copyright{
     }
     .section-2 .content .item:nth-child(6){
         left: calc(0% + 150px);
+    }
+
+    .section-2 .content .item img{
+        width: 25px;
+    }
+
+    .section-2 .content .item:nth-child(6) img{
+        width: 15px;
+    }
+
+    .section-2 .content .item .text h6{
+        font-size: 16px;
+    }
+
+    .section-2 .content .item .text p{
+        font-size: 13px;
     }
 
     /* ----x---- section 2 ----x---- */
@@ -1091,7 +1087,36 @@ footer .content .copyright{
         padding: 20px 10px;
     }
 
+    .section-4 .content table tr td .method p,
+    .section-4 .content table tr td .method .choose p{
+        font-size: 16px;
+    }
+    .section-4 .content table tr td .method .fee{
+        font-size: 12px;
+    }
+    .section-4 .content table tr td .item p{
+        font-size: 18px;
+    }
+    .section-4 .content table tr td .item span{
+        font-size: 35px;
+    }
+    .section-4 .content table tr td .item .btn2{
+        font-size: 14px;
+    }
+
     /* ----x---- section 4 ----x---- */
+
+    /* --------- section 5 --------- */
+
+    .section-5 .content .item .title p{
+        font-size: 18px;
+    }
+
+    .section-5 .content .item .dropdown-content p{
+        font-size: 16px;
+    }
+
+    /* ----x---- section 5 ----x---- */
 
     /* --------- footer --------- */
 
@@ -1100,7 +1125,25 @@ footer .content .copyright{
     }
 
     footer .top-content{
-        width: 90%;
+        width: 600px;
+        padding: 20px 30px;
+    }
+
+    footer .top-content .part p{
+        font-size: 25px;
+    }
+
+    footer .top-content .part .btn3{
+        font-size: 16px;
+    }
+
+    footer .content ul li a{
+        font-size: 16px;
+    }
+
+    footer .content .scroll-up{
+        width: 70px;
+        padding: 21px 20px;
     }
 
     /* ----x---- footer ----x---- */
@@ -1110,10 +1153,10 @@ footer .content .copyright{
 @media screen and (max-width: 900px){
 
     .section-header h2, .section-header h2 span{
-        font-size: 35px;
+        font-size: 30px;
     }
     .section-header p{
-        font-size: 16px;
+        font-size: 14px;
     }
 
     /* --------- hero --------- */
@@ -1134,6 +1177,10 @@ footer .content .copyright{
     /* ----x---- hero ----x---- */
 
     /* --------- section 2 --------- */
+
+    .section-2 .content img{
+        width: 130px;
+    }
 
     .section-2 .content{
         padding: 500px 0;
@@ -1175,16 +1222,39 @@ footer .content .copyright{
         width: 100%;
     }
 
+    .section-3 .content .item .img-box{
+        width: 150px;
+        height: 150px;
+    }
+
+    .section-3 .content .item span{
+        font-size: 35px;
+    }
+
+    .section-3 .content .item .img-box img{
+        width: 60px;
+    }
+
+    .section-3 .content .item .text a{
+        font-size: 14px;
+    }
+
     /* ----x---- section 3 ----x---- */
 
     /* --------- section 4 --------- */
 
-    .section-4 .content .payment .method{
-        width: 100%;
+    .section-4 .content table{
+        display: block;
+        table-layout: fixed;
+        overflow-x: auto;
     }
 
-    .section-4 .content .payment .item-box{
-        flex-direction: column;
+    .section-4 .content table tr td {
+        min-width: 200px;
+    }
+
+    .section-4 .content table tr td{
+        font-size: 16px;
     }
 
     /* ----x---- section 4 ----x---- */
@@ -1193,18 +1263,6 @@ footer .content .copyright{
 
     .section-5 .content{
         padding: 0;
-    }
-
-    .section-5 .content .item .title p{
-        font-size: 18px;
-    }
-
-    .section-5 .content .item .dropdown-content p{
-        font-size: 16px;
-    }
-
-    .section-5 .content .item .title .buttons{
-        margin-left: 50px;
     }
 
     /* ----x---- section 5 ----x---- */
@@ -1221,46 +1279,34 @@ footer .content .copyright{
         left: calc(100% - 400px);
     }
 
-    /* --------- section 2 --------- */
-
-    .section-2 .content .item .text h6{
-        font-size: 18px;
+    .section-header h2, .section-header h2 span{
+        font-size: 28px;
     }
-    .section-2 .content .item .text p{
+
+    .section-header p{
         font-size: 14px;
     }
-    .section-2 .content img{
-        width: 150px;
+
+    /* --------- hero --------- */
+
+    .hero .content h1{
+        font-size: 33px;
     }
 
-    /* ----x---- section 2 ----x---- */
+    .hero .content h1 span{
+        font-size: 51px;
+    }
+
+    .hero .content p{
+        font-size: 14px;
+    }
+
+    /* ----x---- hero ----x---- */
 
     /* --------- section 3 -------- */
 
-    .section-3 .content .item span{
-        font-size: 35px;
-    }
-
-    .section-3 .content .item .img-box{
-        width: 150px;
-        height: 150px;
-    }
-
     .section-3 .content .item .text{
         margin: 30px 0;
-    }
-
-    .section-3 .content .item .text p{
-        font-size: 18px;
-    }
-
-    .section-3 .content .item .text a{
-        font-size: 16px;
-        padding: 15px 20px;
-    }
-
-    .section-3 .content .item .img-box img{
-        width: 50px;
     }
 
     /* ----x---- section 3 ----x---- */
@@ -1275,36 +1321,64 @@ footer .content .copyright{
 
     /* ----x---- section 4 ----x---- */
 
+    /* --------- section 5 --------- */
+
+    .section-5 .content .item .title p{
+        font-size: 17px;
+    }
+
+    .section-5 .content .item.active{
+        height: 85px;
+    }
+
+    /* ----x---- section 5 ----x---- */
+
     /* --------- footer --------- */
 
     footer .top-content{
-        width: 100%;
+        width: 500px;
     }
 
-    footer .top-content .part:nth-child(2){
-        display: none;
+    footer .top-content .part p{
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    footer .top-content .part .btn3{
+        font-size: 14px;
     }
 
     /* ----x---- footer ----x---- */
 
 }
 
-@media screen and (max-width: 550px){
+@media screen and (max-width: 600px) {
+    .wrapper{
+        padding: 20px 25px;
+    }
+    footer .top-content{
+        width: 100%;
+    }
+    footer .top-content .part .btn3{
+        padding: 12px;
+    }
+    .section-5 .content .item.active{
+        height: 90px;
+    }
+}
+
+@media screen and (max-width: 500px){
 
     .section-header h2, .section-header h2 span{
-        font-size: 28px;
+        font-size: 24px;
+    }
+
+    .section-header p{
+        font-size: 12px
     }
 
     .section-header{
         margin-bottom: 50px;
-    }
-
-    .section-header p{
-        font-size: 13px;
-    }
-
-    .wrapper{
-        padding: 20px 25px;
     }
 
     section{
@@ -1326,16 +1400,16 @@ footer .content .copyright{
     /* --------- hero --------- */
 
     .hero .content h1 {
-        font-size: 30px;
+        font-size: 28px;
     }
     .hero .content h1 span{
-        font-size: 46px;
+        font-size: 44px;
     }
     .hero .content .btn-box .btn2{
-        padding: 13px 25px;
+        padding: 13px 23px;
     }
     .hero .content p{
-        font-size: 14px;
+        font-size: 13px;
     }
 
     /* ----x---- hero ----x---- */
@@ -1361,22 +1435,32 @@ footer .content .copyright{
     .section-5 .content .item .title .buttons{
         margin-left: 20px;
     }
+    .section-5 .content .item .title p{
+        font-size: 15px;
+    }
+
+    .section-5 .content .item .dropdown-content p{
+        font-size: 14px;
+    }
+
+    .section-5 .content .item.active{
+        height: 100px;
+    }
 
     /* ----x---- section 5 ----x---- */
 
     /* --------- footer --------- */
 
-    footer .top-content .part:nth-child(1){
-        padding: 25px;
-    }
-
-    footer .top-content .part .btn3{
-        font-size: 16px;
-        padding: 15px 20px;
+    footer .top-content{
+        padding: 20px;
     }
 
     footer .top-content .part p{
-        font-size: 27px;
+        font-size: 18px;
+    }
+
+    footer .top-content .part .btn3{
+        padding: 10px;
     }
 
     footer .content{
@@ -1385,10 +1469,6 @@ footer .content .copyright{
 
     footer .content ul li{
         padding: 0 10px;
-    }
-
-    footer .content ul li a{
-        font-size: 16px;
     }
 
     /* ----x---- footer ----x---- */
@@ -1437,6 +1517,10 @@ footer .content .copyright{
 
     footer::before {
         border-top: 100px solid var(--black);
+    }
+
+    footer .top-content .part img{
+        max-width: 450px;
     }
 
     /* ----x---- footer ----x---- */
@@ -1488,6 +1572,7 @@ footer .content .copyright{
 .upgrade-section-2 .content {
     margin-top: 150px;
     display: flex;
+    align-items: center;
 }
 
 .upgrade-section-2 .content .choose{
@@ -1511,6 +1596,7 @@ footer .content .copyright{
     margin: 50px 0;
     cursor: pointer;
     height: 50px;
+    position: relative;
 }
 
 .upgrade-section-2 .content .choose .choose-item span{
@@ -1532,6 +1618,19 @@ footer .content .copyright{
 
 .upgrade-section-2 .content .choose .choose-item.done span{
     background-color: var(--main-orange);
+}
+
+.upgrade-section-2 .content .choose .choose-item:nth-child(1):after,
+.upgrade-section-2 .content .choose .choose-item:nth-child(2):after,
+.upgrade-section-2 .content .choose .choose-item:nth-child(3):after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 9px;
+    width: 1px;
+    height: 80px;
+    background-color: var(--main-orange);
+    transform: translateY(-15px);
 }
 
 .upgrade-section-2 .content .choose .choose-item p{
@@ -1647,154 +1746,211 @@ footer .content .copyright{
 }
 
 @media screen and (max-width: 1240px) {
-    .page-section-header span:nth-child(2){
-        transform: translate(-50%, -50%);
-        white-space: nowrap;
-    }
-    .page-section-header span:nth-child(3){
-        transform: translate(-50%,27px);
-        white-space: nowrap;
-    }
     .upgrade-section-2{
         padding: 150px 0 100px;
     }
-    .upgrade-section-2 .content{
-        flex-direction: column;
-        margin-top: 100px;
+    .page-section-header h2{
+        font-size: 33px;
+        transform: translate(25px, 5px);
     }
-    .upgrade-section-2 .content .choose{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-    }
-    .upgrade-section-2 .content .choose::after{
-        top: 100%;
-        left: 0;
-        width: 100%;
-        height: 1px;
-    }
-    .upgrade-section-2 .content .choose .choose-item.active span{
-        transform: translate(0);
-        margin-right: 15px;
+    .page-section-header span{
+        font-size: 50px;
     }
     .upgrade-section-2 .content .choose .choose-item span{
-        margin-right: 20px;
+        width: 15px;
+        height: 15px;
+        margin-right: 10px;
     }
-    .upgrade-section-2 .page-section-header{
-        text-align: center;
+    .upgrade-section-2 .content .choose .choose-item.active span{
+        width: 30px;
+        height: 30px;
+        border: 10px solid var(--main-orange);
+        transform: translateX(-5px);
+        margin-right: 5px;
     }
-    .upgrade-section-2 .page-section-header span{
-        left: 50%;
+    .upgrade-section-2 .content .choose .choose-item p{
+        font-size: 18px;
     }
-    .upgrade-footer .content{
-        margin: 0;
+    .upgrade-section-2 .content .chosen-content .item .title{
+        font-size: 27px;
+    }
+    .upgrade-section-2 .content .chosen-content .item .item-content p, .upgrade-section-2 .content .chosen-content .item .item-content span{
+        font-size: 20px;
+    }
+    .continue-btn{
+        font-size: 18px;
+    }
+    .upgrade-section-2 .content .choose .choose-item:nth-child(1)::after, .upgrade-section-2 .content .choose .choose-item:nth-child(2)::after, .upgrade-section-2 .content .choose .choose-item:nth-child(3)::after{
+        left: 7px;
+        height: 86px;
+        transform: translateY(-18px);
+    }
+    .upgrade-section-2 .content .choose .choose-item.active span{
+        transform: translateX(-7px);
     }
 }
 
 @media screen and (max-width: 1080px) {
     .upgrade-section-2 .content .choose{
-        padding-bottom: 50px;
-        display: grid;
-        grid-column-gap: 20px;
-        grid-template-columns: auto auto auto auto;
+        width: 400px;
     }
-    .upgrade-section-2 .content .choose .choose-item{
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100px;
-        padding-top: 15px;
+    .upgrade-section-2 .content .chosen-content .item .title{
+        font-size: 24px;
     }
-    .upgrade-section-2 .content .choose .choose-item.active{
-        padding: 0;
+    .upgrade-section-2 .content .chosen-content .item .item-content p, .upgrade-section-2 .content .chosen-content .item .item-content span{
+        font-size: 18px;
     }
-    .upgrade-section-2 .content .choose .choose-item span{
-        margin: 10px 0;
-    }
-    .upgrade-section-2 .content .choose .choose-item.active span{
-        margin: 10px 0;
-    }
-}
-
-@media screen and (max-width: 900px) {
-    .upgrade-section-2 .content .choose{
-        grid-template-columns: auto auto;
-        justify-content: center;
-    }
-    .upgrade-section-2 .content .choose .choose-item{
-        margin: 10px 0;
-    }
-    .upgrade-section-2 .content .chosen-content{
-        margin: 25px;
-    }
-    .upgrade-footer .content{
-        padding-top: 50px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .upgrade-section-2 {
-        padding: 100px 0 50px 0;
-    }
-    .upgrade-section-2 .content .choose .choose-item{
-        height: 80px;
-    }
-    .upgrade-section-2 .content .choose .choose-item span {
-        width: 15px;
-        height: 15px;
-    }
-    .upgrade-section-2 .content .choose .choose-item.active span{
-        width: 30px;
-        height: 30px;
-        border: 7px solid var(--main-orange);
+    .continue-btn{
+        font-size: 16px;
     }
     .upgrade-section-2 .content .choose .choose-item p{
         font-size: 16px;
     }
-    .upgrade-section-2 .content .chosen-content .item .title{
-        font-size: 27px;
+    .upgrade-section-2 .content .chosen-content .item .item-content .form label{
+        font-size: 18px;
+        top: 8px;
     }
-    .upgrade-section-2 .content .chosen-content .item .item-content p,
-    .upgrade-section-2 .content .chosen-content .item .item-content span{
+}
+
+@media screen and (max-width: 900px) {
+    .page-section-header{
+        text-align: center;
+    }
+    .page-section-header h2{
+        font-size: 30px;
+        transform: translate(0,2px);
+    }
+    .page-section-header span{
+        font-size: 45px;
+    }
+    .page-section-header span:nth-child(2){
+        left: 50%;
+        transform: translate(-50%,-50%);
+        white-space: nowrap;
+    }
+    .page-section-header span:nth-child(3){
+        left: 50%;
+        transform: translate(-50%,25px);
+    }
+    .upgrade-section-2 .content .chosen-content{
+        margin: 25px;
+    }
+    .upgrade-section-2 .content .chosen-content .item .title{
         font-size: 20px;
     }
-}
-
-@media screen and (max-width: 650px) {
-    .upgrade-section-2 .content .chosen-content{
-        margin: 25px 0;
-    }   
-}
-
-@media screen and (max-width: 500px) {
+    .upgrade-section-2 .content .chosen-content .item .item-content .form label{
+        font-size: 16px;
+        top: 12px;
+    }
+    .upgrade-section-2 .content .chosen-content .item .item-content p, .upgrade-section-2 .content .chosen-content .item .item-content span{
+        font-size: 16px;
+    }
+    .continue-btn{
+        padding: 15px 20px;
+    }
+    .upgrade-section-2{
+        padding: 100px 0;
+    }
     .upgrade-section-2 .content{
-        margin-top: 20px;
+        margin-top: 100px;
     }
-    .upgrade-section-2 .content .choose .choose-item{
-        height: 60px;
-    }
-    .upgrade-section-2 .content .choose{
-        padding-bottom: 25px;
+    .upgrade-section-2 .content .choose::after{
+        margin: 0 10px;
     }
     .upgrade-section-2 .content .choose .choose-item.active span{
-        width: 15px;
-        height: 15px;
+        width: 20px;
+        height: 20px;
         border: 5px solid var(--main-orange);
-        transform: translateY(15px);
-    }
-    .upgrade-section-2 .content .choose .choose-item p{
-        font-size: 12px;
     }
     .upgrade-section-2 .content .choose .choose-item span{
         width: 10px;
         height: 10px;
     }
-    .upgrade-section-2 .content .chosen-content .item .title{
+    .upgrade-section-2 .content .choose .choose-item p{
+        font-size: 14px;
+    }
+    .upgrade-section-2 .content .choose .choose-item:nth-child(1)::after, .upgrade-section-2 .content .choose .choose-item:nth-child(2)::after, .upgrade-section-2 .content .choose .choose-item:nth-child(3)::after{
+        left: 5px;
+        height: 90px;
+        transform: translateY(-20px);
+    }
+    .upgrade-section-2 .content .choose .choose-item.active span{
+        transform: translateX(-4px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .page-section-header h2{
+        font-size: 25px;
+    }
+    .page-section-header span{
+        font-size: 35px;
+    }
+    .upgrade-section-2 {
+        padding: 100px 0 50px 0;
+    }
+    .upgrade-section-2 .content .chosen-content .item .item-content .form input{
         font-size: 20px;
     }
-    .upgrade-section-2 .content .chosen-content .item .item-content p,
-    .upgrade-section-2 .content .chosen-content .item .item-content span{
+    .upgrade-section-2 .content .chosen-content{
+        width: 700px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .upgrade-section-2 .content .chosen-content .item .title{
         font-size: 16px;
+    }
+    .upgrade-section-2 .content .chosen-content .item .item-content .form label{
+        font-size: 12px;
+        top: 15px;
+    }
+    .upgrade-section-2 .content .chosen-content .item .item-content p, .upgrade-section-2 .content .chosen-content .item .item-content span{
+        font-size: 14px;
+    }
+    .continue-btn{
+        font-size: 14px;
+        padding: 12px;
+    }
+    .page-section-header h2{
+        font-size: 20px;
+    }
+    .page-section-header span{
+        font-size: 30px;
+    }
+    .upgrade-section-2 .content{
+        margin-top: 50px;
+    }
+    .upgrade-section-2 .content .choose .choose-item p{
+        font-size: 12px;
+    }
+    .upgrade-section-2 .content .choose .choose-item.active span{
+        width: 15px;
+        height: 15px;
+    }
+    .upgrade-section-2 .content .choose{
+        width: 100%;
+    }
+    .upgrade-section-2 .content .choose .choose-item.active span{
+        transform: translateX(-2px);
+    }
+    .upgrade-section-2 .content .chosen-content .item .item-content ul{
+        padding: 0;
+    }
+    .upgrade-section-2 .content .chosen-content .item .item-content ul li{
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .wrapper{
+        padding: 20px 15px;
+    }
+    .upgrade-section-2 .content .chosen-content{
+        margin: 25px 0 25px 15px;
+    }
+    .upgrade-section-2 .content .choose .choose-item p{
+        font-size: 10px;
     }
 }
 
@@ -1858,26 +2014,6 @@ footer .content .copyright{
     padding: 25px 0;
 }
 
-@media screen and (max-width: 1440px){
-    .page-section-header h2{
-        font-size: 40px;
-    }
-    .page-section-header span{
-        font-size: 70px;
-    }
-    .readmore-footer{
-        padding-top: 100px;
-    }
-}
-@media screen and (max-width: 1240px){
-    .page-section-header h2{
-        font-size: 35px;
-        transform: translate(30px, 10px);
-    }
-    .page-section-header span{
-        font-size: 60px;
-    }
-}
 @media screen and (max-width: 1080px){
     .readmore-section-2{
         padding: 150px 0 50px 0;
@@ -1893,16 +2029,6 @@ footer .content .copyright{
     }
 }
 @media screen and (max-width: 768px){
-    .page-section-header{
-        text-align: center;
-    }
-    .page-section-header h2{
-        transform: translate(0, 7px);
-        font-size: 30px;
-    }
-    .page-section-header span{
-        font-size: 50px;
-    }
     .readmore-section-2 .content{
         padding: 0;
     }
@@ -1911,9 +2037,6 @@ footer .content .copyright{
     }
 }
 @media screen and (max-width: 650px) {
-    .page-section-header span{
-        display: none;
-    }
     .readmore-section-2{
         padding: 100px 0 50px 0;
     }
