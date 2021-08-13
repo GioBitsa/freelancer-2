@@ -105,6 +105,23 @@ section {
     opacity: 0.7;
     margin-top: 20px;
 } 
+
+/* magic */
+
+.magic {
+    z-index: 5;
+    position: absolute;
+    top: calc(50% - 20rem);
+    left: calc(50% - 20rem);
+    width: 30rem;
+    height: 30rem;
+    background: url('./images/hero.png') 50% 50% no-repeat fixed;
+    background-size: cover;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+/* end of magic */
   
 /* Preloader */
 
@@ -225,7 +242,7 @@ header .header .bar-btns i{
 /* ------- hero ------- */
 
 .hero{
-    background-image: url(./images/hero.png);
+    /* background-image: url(./images/hero.png); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
