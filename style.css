@@ -111,9 +111,9 @@ section {
 .magic {
     z-index: 5;
     position: absolute;
-    top: calc(50% - 20rem);
-    left: calc(50% - 20rem);
-    width: 30rem;
+    top: calc(50% - 15rem);
+    left: calc(50% - 25rem);
+    width: 50rem;
     height: 30rem;
     background: url('./images/hero.png') 50% 50% no-repeat fixed;
     background-size: cover;
@@ -961,6 +961,11 @@ footer .content .copyright{
 
 @media screen and (max-width: 1080px){
 
+    .magic {
+        left: calc(50% - 20rem);
+        width: 40rem;
+    }
+
     /* --------- header --------- */
 
     header .header ul {
@@ -1288,6 +1293,11 @@ footer .content .copyright{
 
 @media screen and (max-width: 768px) {
 
+    .magic {
+        left: calc(50% - 15rem);
+        width: 30rem;
+    }
+
     header .header ul{
         width: 400px;
     }
@@ -1385,6 +1395,13 @@ footer .content .copyright{
 }
 
 @media screen and (max-width: 500px){
+
+    .magic {
+        top: calc(50% - 10rem);
+        left: calc(50% - 10rem);
+        width: 20rem;
+        height: 20rem;
+    }
 
     .section-header h2, .section-header h2 span{
         font-size: 24px;

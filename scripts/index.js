@@ -2,9 +2,10 @@
 
 $(document).ready(function() {
     var $magic = $(".magic"),
-        magicWHalf = $magic.width() / 2;
+        magicWHalfWidth = $magic.width() / 2;
+        magicWHalfHeight = $magic.height() / 2;
     $(document).on("mousemove", function(e) {
-      $magic.css({"left": e.pageX - magicWHalf, "top": e.pageY - magicWHalf});
+      $magic.css({"left": e.pageX - magicWHalfWidth, "top": e.pageY - magicWHalfHeight});
     });
   });
 
