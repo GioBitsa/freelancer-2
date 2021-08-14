@@ -310,12 +310,49 @@ header .header .bar-btns i{
 
 /* --------- section 2 --------- */
 
+.section-2{
+    position: relative;
+}
+
+.arrows{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    transform: translate(-50%,0);
+}
+
+.arrows .arrows-box{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: seagreen;
+}
+
+.arrows .arrows-box span{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
 .section-2 .content {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     padding: 300px 0;
+    display: none;
+}
+
+.section-2 .replace-img{
+    display: block;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .section-2 .content img{
@@ -1211,6 +1248,14 @@ footer .content .copyright{
 
     /* --------- section 2 --------- */
 
+    .section-2 .replace-img{
+        display: none;
+    }
+
+    .section-2 .content {
+        display: flex;
+    }
+
     .section-2 .content img{
         width: 130px;
     }
@@ -1621,7 +1666,7 @@ footer .content .copyright{
 }
 
 .upgrade-section-2 .content .choose{
-    width: 500px;
+    width: 800px;
     position: relative;
 }
 
@@ -1800,6 +1845,9 @@ footer .content .copyright{
     }
     .page-section-header span{
         font-size: 50px;
+    }
+    .upgrade-section-2 .content .choose{
+        width: 500px;
     }
     .upgrade-section-2 .content .choose .choose-item span{
         width: 15px;

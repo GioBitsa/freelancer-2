@@ -2,11 +2,14 @@
 // moving background mouse effect
 
 $(document).ready(function() {
+    var documentHeight = $(document).height();
     var $magic = $(".magic"),
         magicWHalfWidth = $magic.width() / 2;
         magicWHalfHeight = $magic.height() / 2;
     $(document).on("mousemove", function(e) {
-      $magic.css({"left": e.pageX - magicWHalfWidth, "top": e.pageY - magicWHalfHeight});
+      if(e.pageY + magicWHalfHeight < documentHeight){ // fixed error at the bottom of page
+        $magic.css({"left": e.pageX - magicWHalfWidth, "top": e.pageY - magicWHalfHeight});
+      }
     });
   });
 
